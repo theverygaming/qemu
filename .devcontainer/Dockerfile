@@ -5,6 +5,9 @@ RUN apt-get update
 # basics
 RUN apt-get install --no-install-suggests -y wget bash-completion build-essential
 
+# qemu build deps
+RUN apt-get install --no-install-suggests -y python3 python3-pip flex bison
+
 # qemu deps
 RUN apt-get install --no-install-suggests -y git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build
 
